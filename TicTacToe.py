@@ -1,7 +1,13 @@
-from Tkinter import *
-import tkMessageBox
+from tkinter import *
+
+#Setting up the main_frame
 window = Tk()
 window.title('Tic Tac Toe')
+window.resizable(False, False)
+
+#Setting up the main frame
+main_frame = Frame(window)
+main_frame.grid()
 
 click = True
 
@@ -36,44 +42,44 @@ def checker(buttons):
 
 buttons = StringVar()
 
-
+#Code execution starts here
+#Defining all the buttons
 global button1, button2, button3, button4, button5, button6, button7, button8, button9
 
-button1 = Button(window, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button1)})
-button1.grid({'row': '0', 'column': '0', 'sticky': 'NSEW', 'in': window})
+button1 = Button(main_frame, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button1)})
+button1.grid({'row': '0', 'column': '0', 'sticky': 'NSEW', 'in': main_frame})
 
 
-button2 = Button(window, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button2)})
-button2.grid({'row': '0', 'column': '1', 'sticky': 'NSEW', 'in': window})
+button2 = Button(main_frame, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button2)})
+button2.grid({'row': '0', 'column': '1', 'sticky': 'NSEW', 'in': main_frame})
 
 
-button3 = Button(window, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button3)})
-button3.grid({'row': '0', 'column': '2', 'sticky': 'NSEW', 'in': window})
+button3 = Button(main_frame, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button3)})
+button3.grid({'row': '0', 'column': '2', 'sticky': 'NSEW', 'in': main_frame})
 
 
-button4 = Button(window, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button4)})
-button4.grid({'row': '1', 'column': '0', 'sticky': 'NSEW', 'in': window})
+button4 = Button(main_frame, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button4)})
+button4.grid({'row': '1', 'column': '0', 'sticky': 'NSEW', 'in': main_frame})
 
 
-button5 = Button(window, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button5)})
-button5.grid({'row': '1', 'column': '1', 'sticky': 'NSEW', 'in': window})
+button5 = Button(main_frame, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button5)})
+button5.grid({'row': '1', 'column': '1', 'sticky': 'NSEW', 'in': main_frame})
 
 
-button6 = Button(window, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button6)})
-button6.grid({'row': '1', 'column': '2', 'sticky': 'NSEW', 'in': window})
+button6 = Button(main_frame, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button6)})
+button6.grid({'row': '1', 'column': '2', 'sticky': 'NSEW', 'in': main_frame})
 
 
-button7 = Button(window, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button7)})
-button7.grid({'row': '2', 'column': '0', 'sticky': 'NSEW', 'in': window})
+button7 = Button(main_frame, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button7)})
+button7.grid({'row': '2', 'column': '0', 'sticky': 'NSEW', 'in': main_frame})
 
 
-button8 = Button(window, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button8)})
-button8.grid({'row': '2', 'column': '1', 'sticky': 'NSEW', 'in': window})
+button8 = Button(main_frame, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button8)})
+button8.grid({'row': '2', 'column': '1', 'sticky': 'NSEW', 'in': main_frame})
 
 
-button9 = Button(window, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button9)})
-button9.grid({'row': '2', 'column': '2', 'sticky': 'NSEW', 'in': window})
+button9 = Button(main_frame, {'text': ' ', 'height': '4', 'width': '8', 'font': '10', 'command': lambda: checker(button9)})
+button9.grid({'row': '2', 'column': '2', 'sticky': 'NSEW', 'in': main_frame})
 
 
 window.mainloop()
-
