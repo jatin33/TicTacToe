@@ -88,7 +88,7 @@ def checker(button_number):
         #Setting up the the message label text
         message.config(text = "There is no winner")
 
-#Restart fonction, to resqtart the game
+#Restart fonction, to restart the game
 def restart():
     #reseting buttons text to " "
     for button in button_list:
@@ -150,9 +150,11 @@ button9.grid({'row': '2', 'column': '2', 'sticky': 'NSEW', 'in': main_frame})
 button_list = [button1, button2, button3, button4, button5, button6, button7, button8, button9]
 
 #Defining the widgets in the message_frame
+#The message label
 message = Label(message_frame, text=" ", font=("Arial", 20))
 message.grid()
 
+#The restart button
 restart_button = Button(message_frame, text = "Restart", command=restart)
 restart_button.grid()
 
