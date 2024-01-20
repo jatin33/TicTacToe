@@ -1,4 +1,5 @@
 from tkinter import *
+import time
 
 #Setting up the main_frame
 window = Tk()
@@ -73,6 +74,8 @@ def checker(button_number):
     #Calling a fonction to check who is the winner or if their is a winner so far
     winner = is_winner()
     
+    #Checking the variable winner that is returned after calling is_winner()
+    #If X or O won, switching the screen and indicate the winner
     if winner == "X" or winner == "O":
         #hiding the main_frame
         main_frame.grid_forget()
@@ -80,7 +83,9 @@ def checker(button_number):
         message_frame.grid()
         #Setting up the the message label text
         message.config(text = f"The winner is {winner}")
+        
     elif winner == "no winner":
+        #If there is no winner, switch the screen and indicate that
         #hiding the main_frame
         main_frame.grid_forget()
         #showing the message_frame
